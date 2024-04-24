@@ -9,6 +9,7 @@ Luciana Duque: lucianaduques@usp.br
 - [Kanban/Trello](https://trello.com/invite/b/MAee3zfR/ATTI2718f96ec3ca451d41d22534666778e172261848/projeto-engsoft-web)
 - [Figma](https://www.figma.com/file/10jKGGgdvTRMrAzMVXYuLF/Trilha-das-Arvores?type=design&node-id=0%3A1&mode=design&t=ECsznwul1VXxXlsH-1)
 - [Plano de Projeto](https://docs.google.com/document/d/1VAbbAvHlz4rDe4_bUlS6uRUTRFWFCLKH/edit)
+- [Cronograma](https://docs.google.com/spreadsheets/d/1vaCtpfqJHvyVUlXNRd9Iv_gFVFdwE0sgiNNincrVSyo/edit?usp=sharing)
 
 O projeto será desenvolvido através de sprints seguindo a metodologia ágil.
 ![image](https://github.com/vitorfrois/trilha-arvores/assets/46361092/7471a11f-e50f-4e7f-9534-9b2474d12c6d)
