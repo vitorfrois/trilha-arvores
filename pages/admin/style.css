@@ -1,4 +1,3 @@
-
 /* @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 @import "../node_modules/bootstrap/scss/maps";
@@ -18,12 +17,13 @@
 }
 
 .color-musgo {
-  width: 100%;
+    width: 100%;
     background: #517300;
 }
 
 .btn {
-    background-color: #517300; /* Green */
+    background-color: #517300;
+    /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -31,35 +31,37 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-  }
+}
 
-  .navbar img{
+.navbar img {
     width: 150px;
-  }
+}
 
-  #senha-vis:hover{
+#senha-vis:hover {
     /* background-color: --bs-secondary; */
     background-color: var(--bs-gray-300);
-  }
-  
-  #senha-vis:active{
+}
+
+#senha-vis:active {
     /* background-color: --bs-secondary; */
     background-color: var(--bs-gray-400);
-  }
-  
-  #senha-vis{
+}
+
+#senha-vis {
     width: 24px;
     border-radius: 50%;
-  }
+}
 
-  .img-esalq{
+.img-esalq {
     width: 250px;
     border-radius: 20%;
-  }
+}
 
-  @media (max-width: 991.98px) {
+@media (max-width: 991.98px) {
+
     /* Estilos para telas médias e maiores */
-    .navbar img, .descricao{
-      display: none;
+    .navbar img,
+    .descricao {
+        display: none;
     }
-  }
+}
