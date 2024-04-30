@@ -1,3 +1,11 @@
+
+/* @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root"; */
+
+
 .gradient {
     /* fallback for old browsers */
     background: #2ec27e;
@@ -10,6 +18,7 @@
 }
 
 .color-musgo {
+  width: 100%;
     background: #517300;
 }
 
@@ -22,5 +31,35 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    ;
+  }
+
+  .navbar img{
+    width: 150px;
+  }
+
+  #senha-vis:hover{
+    /* background-color: --bs-secondary; */
+    background-color: var(--bs-gray-300);
+  }
+  
+  #senha-vis:active{
+    /* background-color: --bs-secondary; */
+    background-color: var(--bs-gray-400);
+  }
+  
+  #senha-vis{
+    width: 24px;
+    border-radius: 50%;
+  }
+
+  .img-esalq{
+    width: 250px;
+    border-radius: 20%;
+  }
+
+  @media (max-width: 991.98px) {
+    /* Estilos para telas médias e maiores */
+    .navbar img, .descricao{
+      display: none;
+    }
   }
