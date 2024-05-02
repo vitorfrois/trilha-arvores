@@ -19,62 +19,85 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="align-items-center col-sm-6 text-black">
-                        <nav class="navbar">
-                            <img src="/assets/img/trilha.png" alt="">
+                        <nav class="navbar navbar-expand">
+                            <div class="container-fluid">
+                                <img src="/assets/img/trilha.png" alt="">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meuId"
+                                    aria-controls="meuId" aria-expanded="false">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="meuId">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/pages/mobile/index.html">Aplicativo</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/pages/admin/login.html">Administração</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </nav>
 
-                        <div class="px-5 ms-xl-4 mt-3 descricao">
-                            <i class="fas fa-crow fa-2x pt-5 mt-xl-4" style="color: #709085;"></i>
-                            <span class="h1 fw-bold mb-0">Trilha da Árvores</span>
-                            <p class="fas fa-crow fa-2x pt-3 text-secondary">Login da administração do aplicativo Trilha das Árvores, utilizado na ESAQL para
-                                gerenciar percursos e informações relacionadas às trilhas existentes.</p>
+                        <div>
+                            <div class="px-xl-5 ms-xl-4 mt-xl-5 pt-5 pt-xl-0">
+                                <i class="fas fa-crow fa-2x" style="color: #709085;"></i>
+                                <span class="h1 fw-bold mb-0">Trilha da Árvores</span>
+                                <p class="fas fa-crow fa-2x d-none d-lg-block text-secondary">Login da administração do
+                                    aplicativo Trilha
+                                    das Árvores, utilizado na ESAQL para
+                                    gerenciar percursos e informações relacionadas às trilhas existentes.</p>
 
-                        </div>
+                            </div>
 
-                        <div class="h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                            <div class="h-custom-2 px-xl-5 ms-xl-4 mt-xl-5 pt-5 pt-xl-0 mt-xl-n5">
 
-                            <form style="width: 23rem;">
+                                <form style="width: 23rem; max-width: 80%;">
 
-                                <!-- <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login Administrador</h3> -->
+                                    <!-- <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login Administrador</h3> -->
 
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                    <label class="form-label" for="input-email">Usuário</label>
-                                    <input type="email" id="input-email" class="form-control is-valid"
-                                        placeholder="Digite seu usuário" />
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                    <label class="form-label" for="input-password">Senha</label>
-                                    <div class="input-group">
-                                        <input type="password" id="input-password" class="form-control"
-                                            placeholder="Digite sua senha" />
-                                        <btn class="input-group-text bg-white" id="validationTooltipUsernamePrepend">
-                                            <i class="bi bi-eye-slash" id="senha-vis"></i>
-                                        </btn>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <label class="form-label" for="input-email">Usuário</label>
+                                        <input type="email" id="input-email" class="form-control is-valid"
+                                            placeholder="Digite seu usuário" />
                                     </div>
-                                </div>
 
-                                <div class="text-center pt-1 mb-5 pb-1">
-                                    <button data-mdb-button-init data-mdb-ripple-init
-                                        class="color-musgo btn btn-dark"
-                                        type="button">
-                                        Entrar</button>
-                                </div>
-                                
-                            </form>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <label class="form-label" for="input-password">Senha</label>
+                                        <div class="input-group">
+                                            <input type="password" id="input-password" class="form-control"
+                                                placeholder="Digite sua senha" />
+                                            <btn class="input-group-text bg-white"
+                                                id="validationTooltipUsernamePrepend">
+                                                <i class="bi bi-eye-slash" id="senha-vis"></i>
+                                            </btn>
+                                        </div>
+                                    </div>
 
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <button data-mdb-button-init data-mdb-ripple-init
+                                            class="color-musgo btn btn-dark" type="button">
+                                            Entrar</button>
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
 
-                    </div>
-                    <div class="col-sm-6 px-0 d-none d-sm-block">
-                        <img src="/assets/img/flamboyant-laranja-esalq.jpg"
-                            alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
-                    </div>
 
-                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                        <div class="img-esalq bg-white p-4 d-sm-block">
-                            <img src="/assets/img/esalq.png" class="w-100 rounded me-2" alt="...">
-                            <div class="toast-header">
+                    </div>
+                    <div class="col-md-0 col-lg-6 px-0 d-none d-xl-block">
+                        <img src="/assets/img/flamboyant-laranja-esalq.jpg" alt="Login image" class="w-100 vh-100"
+                            style="object-fit: cover; object-position: left;">
+
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                            <div class="img-esalq bg-white p-4 d-sm-block">
+                                <img src="/assets/img/esalq.png" class="w-100 rounded me-2" alt="...">
+                                <div class="toast-header">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,23 +112,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-        <script>
-        document.getElementById("senha-vis").addEventListener("click", function() {
+    <script>
+        document.getElementById("senha-vis").addEventListener("click", function () {
             var senhaInput = document.getElementById("input-password");
             var icon = this.querySelector("i");
-            
+
             if (senhaInput.type === "password") {
-              senhaInput.type = "text";
-              this.classList.remove("bi-eye-slash");
-              this.classList.add("bi-eye");
+                senhaInput.type = "text";
+                this.classList.remove("bi-eye-slash");
+                this.classList.add("bi-eye");
             } else {
-              senhaInput.type = "password";
-              this.classList.remove("bi-eye");
-              this.classList.add("bi-eye-slash");
+                senhaInput.type = "password";
+                this.classList.remove("bi-eye");
+                this.classList.add("bi-eye-slash");
             }
-          });
+        });
     </script>
-          
+
 </body>
 
 </html>
