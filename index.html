@@ -13,66 +13,51 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg color-musgo navbar-light bg-light ">
-        <div class="container-fluid">
-            <img src="/assets/img/trilha.png" alt="">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meuId"
-                aria-controls="meuId" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="meuId">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/mobile/index.html">Aplicativo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/admin/login.html">Administração</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
     <main>
         <section class="vh-100">
-            <div class="text-black">
-                <div class="px-5 ms-xl-4 mt-3 descricao">
-                    <i class="fas fa-crow fa-2x pt-5 mt-xl-4" style="color: #709085;"></i>
-                    <span class="h1 fw-bold mb-0">Trilha da Árvores</span>
-                    <p class="fas fa-crow fa-2x pt-3 text-secondary">Login da administração do aplicativo Trilha
-                        das Árvores, utilizado na ESAQL para
-                        gerenciar percursos e informações relacionadas às trilhas existentes.</p>
-
-                </div>
-
-                <p>
-                    O projeto Trilha das Árvores busca desenvolver uma ferramenta
-                    para aproximar a comunidade da cidade de Piracicaba ao campus da ESALQ,
-                    unidade da USP que contém um área de preservação ambiental e árvores
-                    características dos biomas brasileiros através da Corrida de Orientação.
-
-                </p>
-
-            </div>
-
-            <div style="max-width: 50%;"">
-                <div class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" style="max-width: 50%; aspect-ratio: 1/1;">
-                        <div class="carousel-item active">
-                            <img src="/pages/user/img/a1.jpg" class="d-block w-100" alt="...">
+            <div class="row">
+                <div class="text-black col-md-6">
+                    <nav class="navbar navbar-expand">
+                        <div class="container-fluid">
+                            <img src="/assets/img/trilha.png" alt="">
+                            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meuId"
+                                aria-controls="meuId" aria-expanded="false">
+                                <span class="navbar-toggler-icon"></span>
+                            </button> -->
+                            <div class="collapse navbar-collapse" id="meuId">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/pages/mobile/index.html">Aplicativo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/pages/admin/login.html">Administração</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="/pages/user/img/a2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/pages/user/img/a3.jpg" class="d-block w-100" alt="...">
-                        </div>
+                    </nav>
+                    
+                    <div class="px-5 ms-4 mt-3">
+                        <span class="h1 fw-bold mb-0">Trilha das Árvores</span>
+                        <p class="fa-2x pt-3 fs-4">
+                            O projeto Trilha das Árvores busca desenvolver uma ferramenta
+                            para aproximar a comunidade da cidade de Piracicaba ao campus da ESALQ,
+                            unidade da USP que contém um área de preservação ambiental e árvores
+                            características dos biomas brasileiros através da Corrida de Orientação.
+                        </p>
                     </div>
                 </div>
-            </div>
 
+                <div class="col-md-6 px-0">
+                    <img src="/assets/img/flamboyant-laranja-esalq.jpg"
+                        alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                </div>
+
+            </div>
             <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
                 <div class="img-esalq bg-white p-4 d-sm-block">
                     <img src="/assets/img/esalq.png" class="w-100 rounded me-2" alt="...">
