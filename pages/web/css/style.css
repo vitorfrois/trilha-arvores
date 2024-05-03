@@ -48,17 +48,17 @@ p {
     width: 150px;
 }
 
-#senha-vis:hover {
+.btn-interactice:hover {
     /* background-color: --bs-secondary; */
     background-color: var(--bs-gray-300);
 }
 
-#senha-vis:active {
+.btn-interactice:active {
     /* background-color: --bs-secondary; */
     background-color: var(--bs-gray-400);
 }
 
-#senha-vis {
+.btn-interactice {
     width: 24px;
     border-radius: 50%;
 }
@@ -100,4 +100,48 @@ p {
 
 .bg-cinza{
     background-color: #D9D9D9;
+}
+
+.line{
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.table-head{
+    color: #ACACAC;
+    border-bottom: none;
+    padding: 0px !important; 
+}
+
+table {
+    border-collapse: separate;
+    border-spacing:0 1em;
+    font-family: 'Montserrat';
+}
+
+tbody th:first-child{
+    border-radius: 1em 0 0 1em;
+}
+
+tbody td:last-child{
+    border-radius: 0 1em 1em 0;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+#search-input{
+    border-radius: 2rem 0 0 2rem;
+}
+
+#search-btn{
+    border-radius: 0 2rem 2rem 0;
+}
+
+.edit{
+    padding: .5rem;
+}
+
+.remove{
+    padding: .5rem;
 }
