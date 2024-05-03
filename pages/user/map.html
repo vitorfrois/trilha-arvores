@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>HERE Maps Example</title>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        /* Define the map container's size */
+        #map {
+            width: 100%;
+            height: 90vh;
+            position: absolute;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <!-- Map container -->
+    <div id="map"></div>
+    <div class="resto">
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+        <p>adjodjaidaisdnandasnkd sansd nasds ad</p>
+    </div>
+
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-clustering.js"></script>
+    <script>
+        // Initialize communication with the platform
+        const platform = new H.service.Platform({
+            apikey: 'KOg_mczWHy70MSKuQMsT_DCrUUAtVOt4M3WIn98E-_Y'
+        });
+
+        // Default options for the base layers that are used to render a map
+        var defaultLayers = platform.createDefaultLayers();
+        
+        // Initialize the map
+        var map = new H.Map(document.getElementById('map'), 
+            defaultLayers.vector.normal.map, {
+                zoom: 17,
+                center: { lat: -22.7106807, lng: -47.6358298 } // Coordinates for Munich, Germany
+            }
+        );
+
+        // add a resize listener to make sure that the map occupies the whole container
+        window.addEventListener('resize', () => map.getViewPort().resize());
+
+        // MapEvents enables the event system
+        // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+        // Create the default UI components
+        var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+        //Create a group for our markers
+        var group = new H.map.Group();
+        map.addObject(group);
+
+        //Let's add a click event to the group, and we'll display the data set to individual marker
+        group.addEventListener('tap', function (evt) {
+                    
+            var bubble = new H.ui.InfoBubble(evt.target.getGeometry(), {
+                content: evt.target.getData()
+            });
+            
+            ui.addBubble(bubble);
+        }, false);
+
+        //Let's create 3 markers, in London, Italy and Netherlands and set the content to be displayed on click
+        var arvore2047 = new H.map.Marker({lat:-22.70900024, lng:-47.63346612});
+        arvore2047.setData("<div><p>Hello!</p></div>");
+        group.addObject(arvore2047);
+
+    </script>
+</body>
