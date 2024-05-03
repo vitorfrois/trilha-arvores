@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    
+    <main>
+        <section class="vh-100">
+            <div class="row">
+                <div class="text-black col-md-6">
+                    <nav class="navbar navbar-expand">
+                        <div class="container-fluid">
+                            <img src="/assets/img/trilha.png" alt="">
+                            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meuId"
+                                aria-controls="meuId" aria-expanded="false">
+                                <span class="navbar-toggler-icon"></span>
+                            </button> -->
+                            <div class="collapse navbar-collapse" id="meuId">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/pages/mobile/index.html">Aplicativo</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/pages/admin/login.html">Administração</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    
+                    <div class="px-5 ms-4 mt-3">
+                        <span class="h1 fw-bold mb-0">Trilha das Árvores</span>
+                        <p class="fa-2x pt-3 fs-4">
+                            O projeto Trilha das Árvores busca desenvolver uma ferramenta
+                            para aproximar a comunidade da cidade de Piracicaba ao campus da ESALQ,
+                            unidade da USP que contém um área de preservação ambiental e árvores
+                            características dos biomas brasileiros através da Corrida de Orientação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 px-0">
+                    <img src="/assets/img/flamboyant-laranja-esalq.jpg"
+                        alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                </div>
+
+            </div>
+            <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div class="img-esalq bg-white p-4 d-sm-block">
+                    <img src="/assets/img/esalq.png" class="w-100 rounded me-2" alt="...">
+                    <div class="toast-header">
+                    </div>
+                </div>
+            </div> -->
+
+
+        </section>
+
+
+        <!-- <label>Esqueceu a senha?</label>
+        <button type="submit" form="login-form" value="submit">Enviar</button> -->
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("senha-vis").addEventListener("click", function () {
+            var senhaInput = document.getElementById("input-password");
+            var icon = this.querySelector("i");
+
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+                this.classList.remove("bi-eye-slash");
+                this.classList.add("bi-eye");
+            } else {
+                senhaInput.type = "password";
+                this.classList.remove("bi-eye");
+                this.classList.add("bi-eye-slash");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
