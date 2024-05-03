@@ -21,6 +21,10 @@
     background: #517300;
 }
 
+.color-txt-musgo{
+    color: #517300;
+}
+
 .btn {
     background-color: #517300;
     /* Green */
@@ -68,3 +72,25 @@
   .valid{
     border-bottom: 2px solid var(--bs-success);
   }
+
+
+.navbar-brand{
+    margin: 0 0;
+}
+
+#search-btn{
+    border-left: none;
+}
+
+#search-input{
+    border-right: none;
+}
+
+.table-row td{
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-cinza{
+    background-color: #D9D9D9;
+}
