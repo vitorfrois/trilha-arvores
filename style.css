@@ -57,11 +57,11 @@
     border-radius: 20%;
 }
 
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
 
     /* Estilos para telas médias e maiores */
     .navbar img,
     .descricao {
         display: none;
     }
-}
+} */
