@@ -1,0 +1,36 @@
+flamboyant:
+  name: Rota dos Flamboyant
+  image: "/assets/trees/a1.jpg"
+  trees: 7
+  distance: 4.5
+
+ipes:
+  name: Caminho dos Ipês
+  image: "/assets/trees/a2.jpg"
+  trees: 5
+  distance: 3.8
+
+acacias:
+  name: Trilha das Acácias
+  image: "/assets/trees/a3.jpg"
+  trees: 3
+  distance: 1.8
+
+jabuticabeiras:
+  name: Trilha das Jabuticabeiras
+  image: "/assets/trees/a4.jpg"
+  trees: 10
+  distance: 1.1
+
+aroeiras:
+  name: Passeio das Aroeiras
+  image: "/assets/trees/a5.jpg"
+  trees: 3
+  distance: 1.8
+
+figueiras:
+  name: Trilha das Figueiras
+  image: "/assets/trees/a6.jpg"
+  trees: 7
+  distance: 13.0
+    

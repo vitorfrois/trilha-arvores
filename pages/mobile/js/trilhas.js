@@ -15,7 +15,7 @@ function loadYAML(file, callback) {
 
 function trilhaHtml(info) {
     html = '<a href="trilha.html" class="text-decoration-none">' +
-        '<div class="container list-i rounded-5 py-4 d-flex mt-4">' +
+        '<div class="container list-i rounded-5 py-3 d-flex mt-4">' +
         '    <div class="imagem">' +
         '        <img src="' + info.image + '" alt="imagem de arvore">' +
         '    </div>' +
@@ -53,7 +53,7 @@ function renderTrilhas(data) {
     }
 }
 
-loadYAML('trilhas.yaml', function (error, data) {
+loadYAML('/assets/trilhas/trilhas.yaml', function (error, data) {
     if (error) {
         console.error('Error loading YAML file:', error);
     } else {
