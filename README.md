@@ -3,6 +3,9 @@ Repositório para o Projeto de Engenharia de Software e Desenvolvimento Web em 2
 
 O projeto Trilha das Árvores busca desenvolver uma ferramenta para aproximar a comunidade da cidade de Piracicaba ao campus da ESALQ, unidade da USP que contém um área de preservação ambiental e árvores características dos biomas brasileiros através da Corrida de Orientação. 
 
+## Apresentações
+- [Parte 1](https://www.canva.com/design/DAGEHwz49Cc/gfauuBYOqf4nbLSlqflPbw/edit?utm_content=DAGEHwz49Cc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## Cliente
 Luciana Duque: lucianaduques@usp.br
 ## Recursos do Projeto
