@@ -1,5 +1,3 @@
-import { load } from 'js-yaml';
-
 function loadYAML(file, callback) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
@@ -15,36 +13,41 @@ function loadYAML(file, callback) {
     xhr.send();
 }
 
-function imgHtml(path) {
-    html = '<img src="' + path + '" class="rounded-circle"' +
-        'style="border-radius:50% !important; width: 100%; aspect-ratio : 1 / 1;">'
-    return html
-    
-}
-
-function descriptionHtml(name, trees, lenght) {
-    html = '<div class="text-center justify-content-center p-2">' +
-            '<h3 class="fw-bold fs-6">' + name + '</h3>' +
-            '<p> <i class="bi bi-tree-fill"></i>' + trees + ' Árvores <i class="bi bi-person-walking"></i>' + lenght + ' km</p> </div>'
+function trilhaHtml(info) {
+    html = '<a href="trilha.html" class="text-decoration-none">' +
+        '<div class="container list-i rounded-5 py-4 d-flex mt-4">' +
+        '    <div class="imagem">' +
+        '        <img src="' + info.image + '" alt="imagem de arvore">' +
+        '    </div>' +
+        '    <div class="info ms-3 my-1 my-sm-4 my-md-5 row">' +
+        '        <div class="info-i col-12">' +
+        '            <h2 class="mb-3">' + info.name + '</h2>' +
+        '        </div>' +
+        '        <div class="info-i col-6">' +
+        '            <i class="bi bi-tree-fill"></i>' +
+        '            <p> ' + info.trees +' Árvores</p>' +
+        '        </div>' + 
+        '        <div class="info-i col-6">' +
+        '            <i class="bi bi-person-walking"></i>' +
+        '            <p>' + info.distance +'Km</p>' +
+        '        </div>' +
+        '    </div>' +
+        '</div>' +
+        '</a>'
     return html
 }
 
 
 function renderTrilhas(data) {
     var trilhaList = document.getElementById('trilhas')
-    var trilhas = load(data);
+    var trilhas = jsyaml.load(data);
     var array = Object.values(trilhas);
 
     for (let i = 0; i < array.length; i++) {
-        var trilha = trilhas[i];
         
-        var card = document.createElement('div')
-        card.className = "grid-card card m-2 p-2"
-        card.style = "max-width: 100%; background-color: whitesmoke;"
-        
-        var html = "";
-        html += imgHtml(trilha.path)
-        html += descriptionHtml(trilha.name, trilha.trees, trilha.lenght);
+        var card = document.createElement('div')        
+        var trilha = array[i];
+        var html = trilhaHtml(trilha);
         card.innerHTML = html;
         trilhaList.appendChild(card);
     }

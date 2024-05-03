@@ -1,5 +1,36 @@
 flamboyant:
-  name: Trilha dos Flamboyants
+  name: Rota dos Flamboyant
+  image: "img/a1.jpg"
   trees: 7
-  lenght: 1.8
-  image: /assets/img/flamboyant-laranja-esalq.jpg
+  distance: 1,8
+
+ipes:
+  name: Caminho dos Ipês
+  image: "img/a2.jpg"
+  trees: 7
+  distance: 1,8
+
+acacias:
+  name: Trilha das Acácias
+  image: "img/a3.jpg"
+  trees: 7
+  distance: 1,8
+
+jabuticabeiras:
+  name: Trilha das Jabuticabeiras
+  image: "img/a4.jpg"
+  trees: 7
+  distance: 1,8
+
+aroeiras:
+  name: Passeio das Aroeiras
+  image: "img/a5.jpg"
+  trees: 7
+  distance: 1,8
+
+figueiras:
+  name: Trilha das Figueiras
+  image: "img/a6.jpg"
+  trees: 7
+  distance: 1,8
+    
