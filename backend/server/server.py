@@ -1,11 +1,14 @@
 from services import FlaskService, DBService
 from models import Admin
+from controllers.trails import trails_controller
 
 from flask import jsonify, request
 import datetime as dt
 
 FlaskService.setup_app()
 app = FlaskService.app
+
+app.register_blueprint(trails_controller, url_prefix="/trails")
 
 
 @app.route('/allAdmin', methods=['GET'])
