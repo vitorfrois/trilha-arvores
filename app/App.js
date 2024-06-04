@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, View, Button, BackHandler, ScrollView, FlatList, ActivityIndicator } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, Button, Pressable, BackHandler, ScrollView, FlatList, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -31,18 +31,28 @@ export default function App() {
 const HomeScreen = ({ navigation }) => {
   return (
     <>
-      <Button
-        title="Lista de Trilhas"
-        onPress={() =>
-          navigation.navigate('Trilhas')
-        }
-      />
-      <Button
-        title="Sair"
-        onPress={() =>
-          BackHandler.exitApp()
-        }
-      />
+      <View style={styles.item}>
+        <Pressable
+          style={styles.button}
+          onPress={() =>
+            navigation.navigate('Trilhas')
+          }
+        >
+          <Text style={styles.text}>Lista de Trilhas</Text>
+        </Pressable>
+      </View>
+      <View style={styles.item}>
+
+        <Pressable
+          style={styles.button}
+          title="Sair"
+          onPress={() =>
+            BackHandler.exitApp()
+          }
+        >
+          <Text style={styles.text}>Sair</Text>
+        </Pressable>
+      </View>
     </>
   );
 };
@@ -53,9 +63,24 @@ const styles = StyleSheet.create({
     paddingTop: 22,
   },
   item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
+    padding: 3,
+    // height: 100,
+    marginVertical: 0,
+    marginHorizontal: 0
+  },
+  text: {
+    color: 'white',
+    fontSize: 20
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 0,
+    paddingHorizontal: 0,
+    borderRadius: 10,
+    elevation: 0,
+    height: 80,
+    backgroundColor: '#2f4538',
   },
 });
 
@@ -80,35 +105,38 @@ const TrilhasScreen = ({ navigation }) => {
   }, []);
 
   const TrilhaCard = item => {
-    const buttonName = item.name;
     return (
-      <Button 
-        title='Botão'
-        onPress={() =>
-          navigation.navigate('Atividade', {item})
-        }>
-      </Button>
+      <View style={styles.item}>
+        <Pressable
+          style={styles.button}
+          onPress={() =>
+            navigation.navigate('Atividade', { item })
+          }
+        >
+          <Text style={styles.text}>{item.title}</Text>
+        </Pressable>
+      </View>
     );
   };
 
   return (
-    <View style={{flex: 1, padding: 24}}>
+    <View style={{ flex: 1, padding: 24 }}>
       {isLoading ? (
         <ActivityIndicator />
       ) : (
         <FlatList
           data={data}
-          keyExtractor={({id}) => id}
-          renderItem={({item}) => TrilhaCard(item)}
+          keyExtractor={({ id }) => id}
+          renderItem={({ item }) => TrilhaCard(item)}
         />
       )}
     </View>
   );
 };
 
-const AtividadeScreen = ( {route, navigation} ) => {
+const AtividadeScreen = ({ route, navigation }) => {
   return (
-    <Text>
+    <Text style={styles.item}>
       {route.params.item.title}, {route.params.item.releaseYear}
     </Text>
   )
