@@ -22,3 +22,6 @@ class Tree(db.Model):
     photo: str = db.Column(db.Text, nullable=True)
     created_at: dt.datetime = db.Column(db.DateTime)
     qr_code: str = db.Column(db.Text, nullable=True)
+
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}

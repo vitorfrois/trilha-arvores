@@ -6,6 +6,7 @@ import datetime as dt
 
 db = DBService.db
 
+
 @dataclass
 class Trail(db.Model):
     __tablename__ = 'trail'
@@ -17,3 +18,6 @@ class Trail(db.Model):
     active: bool = db.Column(db.Boolean, nullable=False)
     photo: str = db.Column(db.Text, nullable=True)
     created_at: dt.datetime = db.Column(db.DateTime)
+
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
