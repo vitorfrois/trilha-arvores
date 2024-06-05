@@ -1,4 +1,4 @@
-from services import FlaskService, DBService
+from backend.services import FlaskService, DBService
 from models import Admin
 
 from flask import jsonify, request
