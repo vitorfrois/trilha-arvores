@@ -4,7 +4,6 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root"; */
 
-
 .gradient {
     /* fallback for old browsers */
     background: #2ec27e;
